@@ -1,1 +1,6 @@
-# responsebot
+# ResponseBot 
+
+
+
+# Authors
+* Amy Burnett
