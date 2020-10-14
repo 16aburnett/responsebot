@@ -4,11 +4,24 @@
 # Author: Amy Burnett
 # Date:   2020/10/13
 ##########################################################################
+# Imports
 
 from responsebot import ResponseBot
 
 ##########################################################################
+# Constants 
 
+# Colors for printing variation
+USER_PROMPT_COLOR  = "\033[1;34m"
+BOT_PROMPT_COLOR  = "\033[1;32m"
+ERROR_COLOR   = "\033[91m"
+SUCCESS_COLOR = "\033[92m"
+NORMAL_COLOR  = "\033[0m"
+
+##########################################################################
+
+# Runs a Read-Eval-Print-Loop for the user to continuously 
+# send and receive messages to and from the responsebot
 def REPL():
 
     # Print welcome message 
@@ -23,13 +36,17 @@ def REPL():
     while (True):
 
         # prompt user 
-        print("> ", end="")
+        print(USER_PROMPT_COLOR, "> ", NORMAL_COLOR, sep="", end="")
         try:
             user_input = input()
         # exit on EOF 
         except EOFError:
             print()
             exit()
+        # dont exit with ctrl+c
+        except KeyboardInterrupt:
+            print("\nKeyboardInterrupt");
+            continue
 
         # trim input 
         user_input = user_input.strip()
@@ -46,7 +63,7 @@ def REPL():
         response = responseBot.respond(user_input)
 
         # print responseBot's response
-        print("Bot>", response)
+        print(BOT_PROMPT_COLOR, "Bot> ", NORMAL_COLOR, response, sep="")
 
 ##########################################################################
 
