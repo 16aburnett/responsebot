@@ -20,15 +20,15 @@ $ source venv/bin/activate
 ```
 The requirements.txt file contains the dependancies for this project. you can install them in the venv with: 
 ```
-$ pip install -r requirements.py
+(venv) $ pip install -r requirements.txt
 ```
 While the env is activated, type the below command to run the program:
 ```
-$ python CLIResponseBot.py
+(venv) $ python CLIResponseBot.py
 ```
 To deactivate the virtual environment, Simply type the below command
 ```
-$ deactivate
+(venv) $ deactivate
 ```
 
 # Authors
