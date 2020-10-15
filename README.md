@@ -8,11 +8,23 @@ Currently, the program is in the development stage and there is no working versi
 
 Download the repository. 
 
-This repository comes with a virtual environment so you do not have to download resources. Simple run:
+Install virtualenv with whatever python command you have for python 3.x 
+```
+$ python3 -m pip install --user virtualenv
+```
+Create a virtual environment
+```
+$ python3 -m env env/
+```
+Activate the environment to use the resources
 ```
 $ source env/bin/activate
 ```
-To run the program, type:
+Then you need to download the dependancies. The requirements.txt file in the repo contains all the dependancies for this project. Once you install it, then you won't need to install it again 
+```
+$ pip install -r requirements.py
+```
+While the env is activated, type the below command to run the program:
 ```
 $ python CLIResponseBot.py
 ```
