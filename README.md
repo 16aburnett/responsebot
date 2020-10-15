@@ -8,19 +8,17 @@ Currently, the program is in the development stage and there is no working versi
 
 Download the repository. 
 
-Install virtualenv with whatever python command you have for python 3.x 
+You will need virtualenv for python3.8.
 ```
-$ python3 -m pip install --user virtualenv
-```
-Create a virtual environment
-```
-$ python3 -m env env/
+$ sudo apt install python3.8
+$ sudo apt install python3.8-venv
+$ python3.8 -m venv venv/
 ```
 Activate the environment to use the resources
 ```
 $ source env/bin/activate
 ```
-Then you need to download the dependancies. The requirements.txt file in the repo contains all the dependancies for this project. Once you install it, then you won't need to install it again 
+The requirements.txt file contains the dependancies for this project. you can install them in the venv with: 
 ```
 $ pip install -r requirements.py
 ```
