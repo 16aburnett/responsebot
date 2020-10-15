@@ -16,7 +16,7 @@ $ python3.8 -m venv venv/
 ```
 Activate the environment to use the resources
 ```
-$ source env/bin/activate
+$ source venv/bin/activate
 ```
 The requirements.txt file contains the dependancies for this project. you can install them in the venv with: 
 ```
